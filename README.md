@@ -22,8 +22,8 @@ This project is a real-time messaging system using Node.js and Socket.IO. The se
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-repo/real-time-messaging-system.git
-cd real-time-messaging-system
+git clone https://github.com/arvindhseenivasan/chat-app.git
+
 ```
 
 ### 2. Install dependencies
