@@ -1,0 +1,28 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "This project demonstrates a real-time messaging system using Node.js and Socket.IO. The server handles API endpoints for joining groups, sending/receiving messages, and managing notifications. The client simulates a user interface without a UI, using a Node.js script to interact with the server.",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arvindhseenivasan/chat-app.git"
+  },
+  "author": "Arvindh Seenivasan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arvindhseenivasan/chat-app/issues"
+  },
+  "homepage": "https://github.com/arvindhseenivasan/chat-app#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.3"
+  }
+}

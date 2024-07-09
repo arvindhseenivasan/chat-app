@@ -1,9 +1,8 @@
 # Real-Time Messaging System with Node.js and Socket.IO
-A messaging application for group and private messaging
 
 ## Introduction
 
-This project demonstrates a real-time messaging system using Node.js and Socket.IO. The server handles API endpoints for joining groups, sending/receiving messages, and managing notifications. The client simulates a user interface without a UI, using a Node.js script to interact with the server.
+This project is a real-time messaging system using Node.js and Socket.IO. The server handles API endpoints for joining groups, sending/receiving messages, and managing notifications. The client simulates a user interface without a UI, using a Node.js script to interact with the server.
 
 ## Features
 
@@ -23,13 +22,26 @@ This project demonstrates a real-time messaging system using Node.js and Socket.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/arvindhseenivasan/chat-app.git
+git clone https://github.com/your-repo/real-time-messaging-system.git
+cd real-time-messaging-system
 ```
 
 ### 2. Install dependencies
 
 ```bash
 npm install
+```
+
+### 3. Create the `.env` file
+
+Create a `.env` file in the root of your project directory with the following content:
+
+```
+SERVER_PORT=3001
+CLIENT_SERVER_URL=http://localhost:3001
+USER_ID=user2
+GROUP=group1
+RECIPIENT_ID=user1
 ```
 
 ## Running the Server
@@ -86,3 +98,41 @@ Response:
   }
 ]
 ```
+
+## Generating Documentation with JSDoc
+
+### 1. Install JSDoc
+
+```bash
+npm install jsdoc --save-dev
+```
+
+### 2. Add JSDoc comments to your code
+
+For example, `server.js` already has JSDoc comments added in the code above.
+
+### 3. Create `jsdoc.json`
+
+Create a `jsdoc.json` file in the root of your project directory:
+
+```json
+{
+  "source": {
+    "include": ["server.js", "client.js"],
+    "exclude": ["node_modules"]
+  },
+  "opts": {
+    "destination": "./docs"
+  }
+}
+```
+
+### 4. Generate Documentation
+
+Run the following command to generate the documentation:
+
+```bash
+npx jsdoc -c jsdoc.json
+```
+
+This will generate the documentation in the `./docs` directory.
