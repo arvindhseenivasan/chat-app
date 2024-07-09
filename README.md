@@ -62,27 +62,6 @@ node client.js
 
 ## API Endpoints
 
-### Join a Group
-
-**POST /join**
-
-Request body:
-
-```json
-{
-  "userId": "user1",
-  "group": "group1"
-}
-```
-
-Response:
-
-```json
-{
-  "message": "user1 joined group1"
-}
-```
-
 ### Get Messages from a Group
 
 **GET /messages/:group**

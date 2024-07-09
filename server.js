@@ -24,34 +24,6 @@ let messages = {};
 let users = {}; // Store user-specific socket connections
 
 /**
- * Joins a user to a group.
- * @param {string} userId - The ID of the user.
- * @param {string} group - The name of the group.
- * @returns {object} A message indicating the user has joined the group.
- */
-
-app.post("/join", (req, res) => {
-  const { userId, group } = req.body;
-
-  const successToast = `${userId} joined ${group}`;
-
-  const failureToast = `${userId} can't join the ${group}`;
-
-  if (!users[userId]) {
-    users[userId] = { group, sockets: [] };
-  }
-
-  if (!groups[group]) {
-    console.warn(`${userId} tried to join ${group} which is not available`);
-
-    res.status(200).send({ message: failureToast });
-  }
-
-  groups[group].push(userId);
-  res.status(200).send({ message: successToast });
-});
-
-/**
  * Gets messages from a group.
  * @param {string} group - The name of the group.
  * @returns {array} An array of messages from the group.
